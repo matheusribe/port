@@ -33,7 +33,7 @@ export default function Header({ currentPage, onNavigate, theme, toggleTheme }) 
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <span className="font-semibold text-gray-900 dark:text-white text-lg">
-              Matheus Ribeiro
+              Portfolio
             </span>
           </div>
           
