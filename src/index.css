@@ -13,92 +13,44 @@
   }
 
   body {
-    @apply bg-white text-gray-900 transition-colors duration-200;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      @apply bg-slate-900 text-gray-100;
-    }
+    @apply bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100;
   }
 }
 
 @layer components {
   .section-title {
-    @apply text-2xl font-bold mb-6;
+    @apply text-2xl font-bold mb-6 text-gray-900 dark:text-white;
   }
 
   .card {
-    @apply p-6 border border-gray-200 rounded-lg transition-all duration-200;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .card {
-      @apply border-slate-700 bg-slate-800;
-    }
+    @apply p-6 border border-gray-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 transition-all duration-200;
   }
 
   .skill-tag {
-    @apply px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .skill-tag {
-      @apply bg-slate-700 text-slate-300;
-    }
+    @apply px-3 py-1 text-sm bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded;
   }
 
   .page-link {
-    @apply text-gray-600 hover:text-gray-900 underline underline-offset-4 transition-colors;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .page-link {
-      @apply text-gray-400 hover:text-gray-200;
-    }
+    @apply text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-4 transition-colors;
   }
 
   .nav-link {
-    @apply text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .nav-link {
-      @apply text-gray-400 hover:text-gray-100;
-    }
+    @apply text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors border-b-2 border-transparent;
   }
 
   .nav-link-active {
-    @apply text-gray-900 border-b-2 border-gray-900;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .nav-link-active {
-      @apply text-white border-white;
-    }
+    @apply text-gray-900 dark:text-white border-blue-600 dark:border-blue-400;
   }
 
   .form-input {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .form-input {
-      @apply bg-slate-800 border-slate-600 text-white;
-    }
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
   }
 
   .btn-primary {
-    @apply inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium;
+    @apply inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors text-sm font-medium;
   }
 
   .divider {
-    @apply border-t border-gray-200 my-8;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .divider {
-      @apply border-slate-700;
-    }
+    @apply border-t border-gray-200 dark:border-slate-700 my-8;
   }
 }

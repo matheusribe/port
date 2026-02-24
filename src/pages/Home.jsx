@@ -1,14 +1,8 @@
+import { memo } from 'react'
 import { PERFIL, PROJETOS } from '../data/dados';
 import SkillTag from '../components/SkillTag';
 
-const areas = [
-  'Análise de Dados',
-  'Ciência de Dados',
-  'Machine Learning',
-  'Business Intelligence'
-];
-
-export default function Home() {
+function Home() {
   return (
     <div className="space-y-10">
       <section className="grid md:grid-cols-3 gap-8">
@@ -20,25 +14,14 @@ export default function Home() {
             <p className="text-gray-500 dark:text-gray-400 mt-1">
               {PERFIL.localizacao}
             </p>
-            <h2 className="text-lg text-gray-700 dark:text-gray-300 mt-3 font-medium">
+            <p className="text-blue-600 dark:text-blue-400 mt-2 font-medium">
               {PERFIL.titulo}
-            </h2>
+            </p>
           </div>
           
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             {PERFIL.resumo}
           </p>
-          
-          <div>
-            <h3 className="font-medium text-gray-900 dark:text-white mb-2">
-              Áreas de Atuação
-            </h3>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-gray-600 dark:text-gray-400">
-              {areas.map((area) => (
-                <span key={area}>{area}</span>
-              ))}
-            </div>
-          </div>
         </div>
         
         <div className="space-y-3">
@@ -68,6 +51,14 @@ export default function Home() {
                 className="page-link block"
               >
                 LinkedIn
+              </a>
+              <a
+                href={PERFIL.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="page-link block"
+              >
+                WhatsApp
               </a>
             </nav>
           </div>
@@ -104,12 +95,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      
-      <div className="divider" />
-      
-      <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-        <strong>Python</strong> • <strong>Pandas</strong> • <strong>Scikit-learn</strong> • <strong>Plotly</strong> • <strong>Power BI</strong> • <strong>Tableau</strong>
-      </p>
     </div>
   );
 }
+
+export default memo(Home)

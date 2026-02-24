@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import { SKILLS, PROFICIENCIA } from '../data/dados';
 import SkillTag from '../components/SkillTag';
 
-export default function Skills() {
+function Skills() {
   return (
     <div className="space-y-10">
       <section>
@@ -153,9 +154,9 @@ export default function Skills() {
               </tr>
             </thead>
             <tbody>
-              {PROFICIENCIA.map((item, index) => (
+              {PROFICIENCIA.map((item) => (
                 <tr 
-                  key={index} 
+                  key={item.categoria} 
                   className="border-b border-gray-100 dark:border-slate-800"
                 >
                   <td className="py-3 px-4 text-sm font-medium text-gray-900 dark:text-white">
@@ -173,3 +174,5 @@ export default function Skills() {
     </div>
   );
 }
+
+export default memo(Skills)

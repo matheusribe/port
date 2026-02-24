@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matheusribe.github.io/sitemap.xml

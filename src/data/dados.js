@@ -2,6 +2,8 @@ export const PERFIL = {
   nome: "Matheus Costa Ribeiro",
   titulo: "Data Analyst | Data Science | Machine Learning | BI",
   localizacao: "Salvador, BA — Brasil",
+  telefone: "+55 (71) 9 9925 6128",
+  whatsapp: "https://wa.me/5571999256128",
   github: "https://github.com/matheusribe",
   email: "matheuscribe@gmail.com",
   linkedin: "https://www.linkedin.com/in/matheusribe",
@@ -49,14 +51,14 @@ export const IDIOMAS = [
 
 export const PROJETOS = [
   {
-    id: "mindmetrics",
-    titulo: "MindMetrics — Análise do Impacto do Uso de Telas na Saúde Mental",
-    imagem: "/images/mindmetrics.png",
-    descricao: `Plataforma de análise de dados para investigar impactos do uso de dispositivos eletrônicos na saúde mental. Processa dados de 105 respondentes explorando correlações entre padrões de uso de telas e indicadores de bem-estar psicológico, incluindo qualidade do sono, níveis de estresse e efeitos adversos percebidos.`,
-    contexto: `A ascensão exponencial da tecnologia digital trouxe integração das telas em diversos âmbitos da vida cotidiana. O aumento no tempo de tela e na conectividade constante levanta preocupações significativas sobre os impactos na saúde mental. Esta pesquisa busca investigar essas relações de forma empírica, fornecendo uma base quantitativa para compreender como diferentes padrões de uso de dispositivos eletrônicos se correlacionam com o bem-estar psicológico.`,
-    abordagem: `Análise descritiva das distribuições demográficas e de uso, correlações entre uso de telas e indicadores de bem-estar, visualizações interativas com Plotly e Altair, análises estratificadas por grupos demográficos.`,
-    tecnologias: ["Python", "Streamlit", "Pandas", "Plotly", "Altair", "openpyxl"],
-    link: "https://mindmetric.streamlit.app/",
+    id: "salary_dash",
+    titulo: "Dashboard de Salários — Análise de Dados",
+    imagem: "/images/salary-dash.png",
+    descricao: `Dashboard interativo para análise de salários em posições de dados (Data Science, Data Engineering, Analytics) com filtros por senioridade, tipo de contrato, localização e tamanho da empresa.`,
+    contexto: `Análise completa de salários com 5.000+ registros de 2020-2025, representando 50+ países e 100+ tipos de cargos diferentes na área de dados.`,
+    abordagem: `Filtros interativos (ano, senioridade, tipo de contrato), visualizações dinâmicas (top 10 salários, histogramas, box plots), evolução salarial anual, distribuição por senioridade, mapa coroplético por país, heatmap país × senioridade, comparação remoto vs presencial vs híbrido.`,
+    tecnologias: ["Python", "Streamlit", "Pandas", "Plotly"],
+    link: "https://github.com/matheusribe/salary-dash",
     categoria: "Análise de Dados"
   },
   {
@@ -75,11 +77,22 @@ export const PROJETOS = [
     titulo: "Análise de Vendas com Tableau e Excel",
     imagem: "/images/tableau_pvendas.png",
     descricao: `Estudo de análise de vendas focado na geração de insights e projeções aplicáveis ao mercado corporativo. O projeto abrangeu todas as etapas, desde a limpeza e padronização dos dados até a criação de dashboards dinâmicos e aplicação de modelos preditivos.`,
-    contexto: `Análise enfocada em suporte à tomada de decisão corporativa com métricas estratégicas. Construção de indicadores-chave de performance, análise de sazonalidade e projeções baseadas em padrões históricos.`,
+    contexto: `Análise enfocada em suporte à tomada de decisões corporativa com métricas estratégicas. Construção de indicadores-chave de performance, análise de sazonalidade e projeções baseadas em padrões históricos.`,
     abordagem: `Limpeza e padronização de dados (Excel), construção de KPIs estratégicos, modelos de tendência para projeção de vendas, visualizações dinâmicas com filtros interativos por período, região, canal de vendas e categoria de produto.`,
     tecnologias: ["Excel", "Tableau"],
     link: "https://public.tableau.com/views/projeto-analise-dados-vendas/Dashboard",
     categoria: "Business Intelligence"
+  },
+  {
+    id: "mindmetrics",
+    titulo: "MindMetrics — Análise do Impacto do Uso de Telas na Saúde Mental",
+    imagem: "/images/mindmetrics.png",
+    descricao: `Plataforma de análise de dados para investigar impactos do uso de dispositivos eletrônicos na saúde mental. Processa dados de 105 respondentes explorando correlações entre padrões de uso de telas e indicadores de bem-estar psicológico, incluindo qualidade do sono, níveis de estresse e efeitos adversos percebidos.`,
+    contexto: `A ascensão exponencial da tecnologia digital trouxe integração das telas em diversos âmbitos da vida cotidiana. O aumento no tempo de tela e na conectividade constante levanta preocupações significativas sobre os impactos na saúde mental. Esta pesquisa busca investigar essas relações de forma empírica, fornecendo uma base quantitativa para compreender como diferentes padrões de uso de dispositivos eletrônicos se correlacionam com o bem-estar psicológico.`,
+    abordagem: `Análise descritiva das distribuições demográficas e de uso, correlações entre uso de telas e indicadores de bem-estar, visualizações interativas com Plotly e Altair, análises estratificadas por grupos demográficos.`,
+    tecnologias: ["Python", "Streamlit", "Pandas", "Plotly", "Altair", "openpyxl"],
+    link: "https://mindmetric.streamlit.app/",
+    categoria: "Análise de Dados"
   }
 ];
 

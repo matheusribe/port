@@ -1,10 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const getInitialTheme = () => {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) return savedTheme
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+const theme = getInitialTheme()
+document.documentElement.classList.add(theme)
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App initialTheme={theme} />
+  </StrictMode>,
 )

@@ -1,11 +1,19 @@
-import { useState } from 'react';
+import { useState, useMemo, memo } from 'react';
 import { PROJETOS } from '../data/dados';
 import SkillTag from '../components/SkillTag';
 
-export default function Projetos() {
+function Projetos() {
   const [selectedProject, setSelectedProject] = useState(PROJETOS[0].id);
   
-  const projeto = PROJETOS.find(p => p.id === selectedProject);
+  const projeto = useMemo(
+    () => PROJETOS.find(p => p.id === selectedProject),
+    [selectedProject]
+  );
+
+  const handleChange = useMemo(
+    () => (e) => setSelectedProject(e.target.value),
+    []
+  );
 
   return (
     <div className="space-y-8">
@@ -20,7 +28,7 @@ export default function Projetos() {
           </label>
           <select
             value={selectedProject}
-            onChange={(e) => setSelectedProject(e.target.value)}
+            onChange={handleChange}
             className="form-input max-w-md"
           >
             {PROJETOS.map(p => (
@@ -30,20 +38,13 @@ export default function Projetos() {
         </div>
         
         <article className="card">
-          <div className="mb-4">
-            {projeto.imagem ? (
-              <img 
-                src={projeto.imagem} 
-                alt={projeto.titulo}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-            ) : (
-              <div className="w-full h-48 bg-gray-100 dark:bg-slate-700 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-gray-400 dark:text-gray-500">
-                  Adicionar imagem do projeto
-                </span>
-              </div>
-            )}
+          <div className="mb-6 overflow-hidden rounded-lg">
+            <img 
+              src={projeto.imagem} 
+              alt={`Screenshot do projeto ${projeto.titulo}`}
+              className="w-full h-auto max-h-96 object-contain bg-gray-50 dark:bg-slate-800 transition-transform duration-300 hover:scale-[1.02]"
+              loading="lazy"
+            />
           </div>
           
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -108,3 +109,5 @@ export default function Projetos() {
     </div>
   );
 }
+
+export default memo(Projetos)
