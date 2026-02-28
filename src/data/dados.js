@@ -1,7 +1,7 @@
 export const PERFIL = {
   nome: "Matheus Costa Ribeiro",
   titulo: "Analista de Dados | Ciência de Dados | Machine Learning | BI",
-  localizacao: "Salvador, BA — Brasil",
+  localizacao: "São Paulo, Brasil",
   telefone: "+55 (71) 9 9925 6128",
   whatsapp: "https://wa.me/5571999256128",
   github: "https://github.com/matheusribe",
